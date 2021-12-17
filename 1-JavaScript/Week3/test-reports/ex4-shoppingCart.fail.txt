@@ -1,0 +1,8 @@
+
+*** ESLint Report ***
+
+ex4-shoppingCart.js
+  27:11  error  Expected '===' and instead saw '=='  eqeqeq
+
+✖ 1 problem (1 error, 0 warnings)
+

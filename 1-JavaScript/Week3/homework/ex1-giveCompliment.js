@@ -19,7 +19,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
 function giveCompliment(name) {
-  const compliment = [
+  const compliments = [
     'brilliant',
     'cool',
     'awesome',
@@ -32,7 +32,7 @@ function giveCompliment(name) {
     'hero'
   ];
   const randomNumber = Math.floor(Math.random()*10);
-  const randomCompliment = compliment[randomNumber];
+  const randomCompliment = compliments[randomNumber];
   return `You are ${randomCompliment}, ${name}!`
 }
 

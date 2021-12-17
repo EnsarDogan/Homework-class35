@@ -1,39 +1,39 @@
 {
-  "node": "v14.15.1",
+  "node": "v14.17.6",
   "system": {
     "manufacturer": "Apple Inc.",
-    "model": "MacBookPro11,3"
+    "model": "MacBookAir7,2"
   },
   "cpu": {
     "manufacturer": "Intel®",
-    "brand": "Core™ i7-4960HQ",
-    "speed": 2.6
+    "brand": "Core™ i5-5350U",
+    "speed": 1.8
   },
-  "memory": "16 GB",
+  "memory": "8 GB",
   "osInfo": {
     "platform": "darwin",
     "distro": "macOS",
-    "release": "11.5.2"
+    "release": "12.0.1"
   },
   "vscodeInfo": {
-    "version": "1.62.1",
+    "version": "1.62.3",
     "extensions": [
+      "dbaeumer.vscode-eslint",
       "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "hdg.live-html-previewer",
+      "hnw.vscode-auto-open-markdown-preview",
       "ritwickdey.LiveServer",
-      "shd101wyy.markdown-preview-enhanced"
+      "streetsidesoftware.code-spell-checker",
+      "WallabyJs.quokka-vscode",
+      "xabikos.JavaScriptSnippets",
+      "yandeu.five-server"
     ],
     "userSettings": {
-      "explorer.confirmDragAndDrop": false,
-      "explorer.confirmDelete": false,
-      "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      },
-      "javascript.updateImportsOnFileMove.enabled": "never",
-      "editor.formatOnSave": true,
-      "editor.tabSize": 2,
-      "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-      }
+      "workbench.editor.untitled.hint": "hidden",
+      "editor.wordWrap": "on",
+      "window.zoomLevel": 1,
+      "javascript.updateImportsOnFileMove.enabled": "always"
     }
   }
 }

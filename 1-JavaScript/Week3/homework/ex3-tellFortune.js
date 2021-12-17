@@ -39,7 +39,7 @@ function selectRandomly(arr) {
 }
 
 function tellFortune(arr1, arr2, arr3, arr4) {
-  return ` You will be a ${selectRandomly(arr4)} in ${selectRandomly(arr3)} married to ${selectRandomly(arr2)} with ${selectRandomly(arr1)} kids.`
+  return `You will be a ${selectRandomly(arr4)} in ${selectRandomly(arr3)}, married to ${selectRandomly(arr2)} with ${selectRandomly(arr1)} kids.`
 }
 
 function main() {
@@ -56,7 +56,7 @@ function main() {
   ];
 
   const jobTitles = [
-    'web Developer', 'doctor', 'captain', 'entrepreneur', 'lawyer'
+    'web developer', 'doctor', 'captain', 'entrepreneur', 'lawyer'
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
