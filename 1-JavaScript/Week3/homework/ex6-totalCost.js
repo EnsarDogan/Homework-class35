@@ -36,7 +36,7 @@ function calculateTotalPrice(obj) {
   }
   return `Total: €${amount}`
 }
-console.log(calculateTotalPrice(cartForParty))
+
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

@@ -140,3 +140,18 @@ ex4-shoppingCart.js
 ✖ 1 problem (1 error, 0 warnings)
 
 
+2021-12-18 12:48:29 info: ----------------------------------------------
+2021-12-18 12:48:29 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2021-12-18 12:48:29 info: ----------------------------------------------
+2021-12-18 12:48:33 info: All unit tests passed.
+2021-12-18 12:48:36 info: All steps were completed successfully
+2021-12-18 12:48:56 info: ----------------------------------------
+2021-12-18 12:48:56 info: >>> Running Unit Test `ex2-dogYears` <<<
+2021-12-18 12:48:56 info: ----------------------------------------
+2021-12-18 12:48:59 info: All unit tests passed.
+2021-12-18 12:49:02 info: All steps were completed successfully
+2021-12-18 12:49:28 info: -------------------------------------------
+2021-12-18 12:49:28 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2021-12-18 12:49:28 info: -------------------------------------------
+2021-12-18 12:49:30 info: All unit tests passed.
+2021-12-18 12:49:34 info: All steps were completed successfully
