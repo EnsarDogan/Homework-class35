@@ -155,3 +155,23 @@ ex4-shoppingCart.js
 2021-12-18 12:49:28 info: -------------------------------------------
 2021-12-18 12:49:30 info: All unit tests passed.
 2021-12-18 12:49:34 info: All steps were completed successfully
+2021-12-18 06:02:06 info: -----------------------------------------
+2021-12-18 06:02:06 info: >>> Running Unit Test `ex6-totalCost` <<<
+2021-12-18 06:02:06 info: -----------------------------------------
+2021-12-18 06:02:06 warn: A unit test file was not provided.
+2021-12-18 06:02:10 info: All steps were completed successfully
+2021-12-18 07:53:22 info: --------------------------------------------
+2021-12-18 07:53:22 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2021-12-18 07:53:22 info: --------------------------------------------
+2021-12-18 07:53:22 warn: A unit test file was not provided.
+2021-12-18 07:53:25 info: All steps were completed successfully
+2021-12-18 07:53:54 info: ------------------------------------------------
+2021-12-18 07:53:54 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2021-12-18 07:53:54 info: ------------------------------------------------
+2021-12-18 07:53:54 warn: A unit test file was not provided.
+2021-12-18 07:53:56 info: All steps were completed successfully
+2021-12-18 07:54:22 info: -------------------------------------------
+2021-12-18 07:54:22 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-12-18 07:54:22 info: -------------------------------------------
+2021-12-18 07:54:22 warn: A unit test file was not provided.
+2021-12-18 07:54:25 info: All steps were completed successfully
