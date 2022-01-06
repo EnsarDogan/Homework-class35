@@ -31,7 +31,7 @@ function giveCompliment(name) {
     'super',
     'hero'
   ];
-  const randomNumber = Math.floor(Math.random()*10);
+  const randomNumber = Math.floor(Math.random() * 10);
   const randomCompliment = compliments[randomNumber];
   return `You are ${randomCompliment}, ${name}!`
 }

@@ -19,17 +19,13 @@ it pure. Do the following:
 
 function addToShoppingCart(arr, item) {
   const newArr =[...arr];
-  if(!item){
-    return newArr;
-  } else {
-    if(arr.length>=3){
+  if(item && arr.length>=3){
       newArr.shift();
       newArr.push(item);
-    } else {
+  }else if(item && arr.length<3){
       newArr.push(item);
-    }
-    return newArr;
   }
+    return newArr;
 }
 
 

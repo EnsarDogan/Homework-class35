@@ -30,9 +30,9 @@ const cartForParty = {
 
 function calculateTotalPrice(obj) {
   const values = Object.values(obj);
-  let amount=0;
-  for(let i=0; i<values.length; i++){
-    amount+=values[i];
+  let amount = 0;
+  for(let i = 0; i<values.length; i++){
+    amount += values[i];
   }
   return `Total: €${amount}`
 }
