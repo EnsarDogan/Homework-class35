@@ -19,6 +19,27 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 
 function createBookList(books) {
   // TODO your code goes in here, return the ul element
+  const ul = document.createElement('ul')
+  ul.style = 'display:flex'
+  books.forEach(book => {
+    const titleAndAuthor = document.createElement('p')
+    const image = document.createElement('img')
+    titleAndAuthor.textContent = `${book.title} - ${book.author}`
+    const li = document.createElement('li')
+    li.style = 'width: 370px; height: 370px; list-style: none; padding: 10px; margin: 20px;'
+    book.alreadyRead === true ? li.style.backgroundColor = 'green' : li.style.backgroundColor = 'red'
+    li.appendChild(titleAndAuthor)
+    li.appendChild(image)
+    ul.appendChild(li)
+  })
+
+  Array.from(ul.children).forEach(child => child.lastElementChild.style.width = '200px')
+
+  ul.children[0].children[1].setAttribute('src', 'https://media.shortform.com/covers/png/the-design-of-everyday-things-cover@8x.png')
+  ul.children[1].children[1].setAttribute('src', 'https://media.s-bol.com/O5MgYVgzEyvp/86qKV8L/548x840.jpg')
+  ul.children[2].children[1].setAttribute('src', 'https://media.s-bol.com/qD2DQKpwk2Ky/Oym85Og/550x718.jpg')
+
+  return ul
 }
 
 function main() {
