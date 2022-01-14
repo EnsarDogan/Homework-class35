@@ -11,3 +11,12 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
+
+document.body.style = "font-family: Arial, sans-serif"
+
+const ul = document.querySelector('ul')
+ul.children[0].textContent = 'Mansur'
+ul.children[1].textContent = 'Sac Tava'
+ul.children[2].textContent = 'Istanbul'
+
+Array.from(ul.children).forEach(li => li.className = 'list-item')
