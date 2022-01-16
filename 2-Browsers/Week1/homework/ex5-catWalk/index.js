@@ -22,7 +22,48 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 function catWalk() {
-  // TODO complete this function
+   const image = document.querySelector('body img');
+   image.style.left = '0px';
+
+   let position = 0;
+   let stop = false;
+   let oneTimeExecuter = false;
+   const stepLength = 10; 
+   const catWidth = 150; //To find the exact middle of the screen, taken into account of the width of the cat.
+
+   setInterval(() => {
+      if (stop) {
+         return;
+      } // it will last 5 seconds for stop variable being true. 
+
+      if (isInTheMiddle()) {
+         stop = true;
+         oneTimeExecuter = true;
+         image.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+         setTimeout(() => { 
+            image.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'; 
+            stop = false; 
+         }, 5000);
+         return;
+      }
+      if (position > document.body.offsetWidth) {
+         position = 0;
+         oneTimeExecuter = false; // needed to reactivate isInTheMiddle controller
+      }
+      walk();
+   }, 50);
+
+   const isInTheMiddle = () => {
+      if (oneTimeExecuter)
+         return false;
+      return (position + catWidth) > document.body.offsetWidth / 2
+   }
+
+   const walk = () => {
+      position += stepLength;
+      image.style.left = (position + 'px');
+   }
+
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+catWalk();
