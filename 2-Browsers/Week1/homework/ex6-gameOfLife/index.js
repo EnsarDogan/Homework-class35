@@ -13,10 +13,12 @@ const NUM_ROWS = 40;
 // life or death
 function createCell(x, y) {
   const alive = Math.random() > 0.5;
+  const lifeTime = alive ? 1 : 0;
   return {
     x,
     y,
     alive,
+    lifeTime
   };
 }
 
@@ -55,8 +57,21 @@ function createGame(context, numRows, numColumns) {
     );
 
     if (cell.alive) {
+      const {lifeTime} = cell
+      let opacity;
+      if(lifeTime === 1){
+        opacity = 0.25
+      }else if(lifeTime === 2){
+        opacity = 0.5
+      }else if(lifeTime === 3){
+        opacity = 0.75
+      }else{
+        opacity = 1
+      }
+     
       // Draw living cell inside background
-      context.fillStyle = `rgb(24, 215, 236)`;
+    
+      context.fillStyle = `rgba(24, 215, 236, ${opacity})`;
       context.fillRect(
         cell.x * CELL_SIZE + 1,
         cell.y * CELL_SIZE + 1,
@@ -114,7 +129,18 @@ function createGame(context, numRows, numColumns) {
     // Apply the newly computed state to the cells
     forEachCell((cell) => {
       cell.alive = cell.nextAlive;
+      const {alive, nextAlive} = cell;
+      if(alive && nextAlive) {
+        cell.lifeTime += 1
+      }else if(alive){
+        cell.lifeTime = 0
+      }else if(nextAlive){
+        cell.lifeTime = 1
+      }
     });
+
+     //To define the value of lifeTime
+    
   }
 
   // Render a visual representation of the grid
