@@ -8,7 +8,6 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
   const logoDiv = document.querySelector("img[alt='Google']")
   logoDiv.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
   logoDiv.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg'

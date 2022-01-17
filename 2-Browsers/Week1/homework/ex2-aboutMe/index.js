@@ -10,7 +10,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    `list-item`.
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+
 
 document.body.style = "font-family: Arial, sans-serif"
 

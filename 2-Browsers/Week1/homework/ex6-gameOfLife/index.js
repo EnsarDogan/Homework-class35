@@ -113,7 +113,6 @@ function createGame(context, numRows, numColumns) {
     forEachCell((cell) => {
       // Count number of living neighboring cells
       const numAlive = countLivingNeighbors(cell);
-
       if (numAlive === 2) {
         // Living cell remains living, dead cell remains dead
         cell.nextAlive = cell.alive;

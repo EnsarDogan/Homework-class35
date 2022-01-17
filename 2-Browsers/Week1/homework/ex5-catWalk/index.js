@@ -66,4 +66,6 @@ function catWalk() {
 
 }
 
-catWalk();
+window.addEventListener('load', catWalk)
+
+

@@ -18,7 +18,7 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  
   const ul = document.createElement('ul')
   ul.style = 'display:flex'
   books.forEach(book => {
@@ -35,9 +35,15 @@ function createBookList(books) {
 
   Array.from(ul.children).forEach(child => child.lastElementChild.style.width = '200px')
 
-  ul.children[0].children[1].setAttribute('src', 'https://media.shortform.com/covers/png/the-design-of-everyday-things-cover@8x.png')
-  ul.children[1].children[1].setAttribute('src', 'https://media.s-bol.com/O5MgYVgzEyvp/86qKV8L/548x840.jpg')
-  ul.children[2].children[1].setAttribute('src', 'https://media.s-bol.com/qD2DQKpwk2Ky/Oym85Og/550x718.jpg')
+  const img1 = ul.children[0].children[1]
+  img1.setAttribute('src', 'https://media.shortform.com/covers/png/the-design-of-everyday-things-cover@8x.png')
+  img1.setAttribute('alt', 'design-of-everyday-things-cover')
+  const img2 = ul.children[1].children[1]
+  img2.setAttribute('src', 'https://media.s-bol.com/O5MgYVgzEyvp/86qKV8L/548x840.jpg')
+  img2.setAttribute('alt', 'the-most-human-human-cover')
+  const img3 = ul.children[2].children[1]
+  img3.setAttribute('src', 'https://media.s-bol.com/qD2DQKpwk2Ky/Oym85Og/550x718.jpg')
+  img3.setAttribute('alt', 'the-pragmatic-programmer-cover')
 
   return ul
 }
