@@ -36,13 +36,13 @@ function createBookList(books) {
   Array.from(ul.children).forEach(child => child.lastElementChild.style.width = '200px')
 
   const img1 = ul.children[0].children[1]
-  img1.setAttribute('src', 'https://media.shortform.com/covers/png/the-design-of-everyday-things-cover@8x.png')
+  img1.setAttribute('src', 'assets/the_design_of_everyday_things.jpg')
   img1.setAttribute('alt', 'design-of-everyday-things-cover')
   const img2 = ul.children[1].children[1]
-  img2.setAttribute('src', 'https://media.s-bol.com/O5MgYVgzEyvp/86qKV8L/548x840.jpg')
+  img2.setAttribute('src', 'assets/the_pragmatic_programmer.jpg')
   img2.setAttribute('alt', 'the-most-human-human-cover')
   const img3 = ul.children[2].children[1]
-  img3.setAttribute('src', 'https://media.s-bol.com/qD2DQKpwk2Ky/Oym85Og/550x718.jpg')
+  img3.setAttribute('src', 'assets/the_pragmatic_programmer.jpg')
   img3.setAttribute('alt', 'the-pragmatic-programmer-cover')
 
   return ul

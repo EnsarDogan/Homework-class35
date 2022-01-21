@@ -56,7 +56,7 @@ function catWalk() {
    const isInTheMiddle = () => {
       if (oneTimeExecuter)
          return false;
-      return (position + catWidth) > document.body.offsetWidth / 2
+      return (position + catWidth) > (document.body.offsetWidth / 2)
    }
 
    const walk = () => {
