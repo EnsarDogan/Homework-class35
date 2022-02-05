@@ -282,3 +282,8 @@ Ran all test suites matching /ex1-johnWho.test.js/i.
 2022-02-05 10:32:21 info: ---------------------------------------
 2022-02-05 10:32:24 info: All unit tests passed.
 2022-02-05 10:32:27 info: All steps were completed successfully
+2022-02-05 11:17:34 info: -------------------------------------------------
+2022-02-05 11:17:34 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-02-05 11:17:34 info: -------------------------------------------------
+2022-02-05 11:17:38 info: All unit tests passed.
+2022-02-05 11:17:41 info: All steps were completed successfully
