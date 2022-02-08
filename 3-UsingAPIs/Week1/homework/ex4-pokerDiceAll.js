@@ -22,11 +22,14 @@ Can you explain why? Please add your answer as a comment to the end of the
 exercise file.
 ------------------------------------------------------------------------------*/
 
+// The line below makes the rollDie() function available to this file.
+// Do not change or remove it.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
+  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return Promise.all(dice.map(die => rollDie(die)));
+  return rollDie(1);
 }
 
 function main() {
