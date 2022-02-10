@@ -369,3 +369,45 @@ Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
 2022-02-08 09:23:39 info: ----------------------------------------------
 2022-02-08 09:23:42 info: All unit tests passed.
 2022-02-08 09:23:46 info: All steps were completed successfully
+2022-02-10 10:51:56 info: --------------------------------------------
+2022-02-10 10:51:56 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-10 10:51:56 info: --------------------------------------------
+2022-02-10 10:52:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (16 ms)
+    ✕ should have all TODO comments removed (5 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (12 ms)
+    ✓ should use `dice.map()` (12 ms)
+    ✓ should use `Promise.all()` (2 ms)
+    ✓ should resolve when all dice settle successfully (104 ms)
+    ✓ should reject with an Error when a die rolls off the table (81 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        4.839 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-02-10 10:52:40 info: --------------------------------------------
+2022-02-10 10:52:40 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-10 10:52:40 info: --------------------------------------------
+2022-02-10 10:52:47 info: All unit tests passed.
+2022-02-10 10:52:55 info: All steps were completed successfully
