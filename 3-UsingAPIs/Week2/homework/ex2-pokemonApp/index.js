@@ -26,45 +26,61 @@ async function fetchData(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return data.results;
+    return data;
   } catch (err) {
     return err.message;
   }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const data = await fetchData('https://pokeapi.co/api/v2/pokemon/');
+
+  clearAllElements();
+
+  const pokemonSelect = document.createElement('select');
+
+  document.body.appendChild(pokemonSelect);
+
+  if (data.results) {
+    data.results.forEach((pokemon) => {
+      const pokemonOption = document.createElement('option');
+      pokemonOption.textContent = pokemon.name;
+      pokemonOption.value = pokemon.url;
+      pokemonSelect.appendChild(pokemonOption);
+    });
+  }
+
+  pokemonSelect.addEventListener('change', showPokemonImage);
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function clearAllElements() {
+  const elementsToRemove = document.querySelectorAll('select, img');
+  elementsToRemove.forEach((element) => {
+    document.body.removeChild(element);
+  });
+}
+
+async function showPokemonImage(event) {
+  const imageUrl = await fetchImage(event.target.value);
+  const imageElement = document.createElement('img');
+  imageElement.src = imageUrl;
+  document.body.appendChild(imageElement);
+}
+
+async function fetchImage(url) {
+  const { sprites } = await fetchData(url);
+  return sprites.front_default;
 }
 
 function main() {
   const getPokemonButton = document.createElement('button');
+  getPokemonButton.type = 'button';
   getPokemonButton.textContent = 'Get Pokemon';
   document.body.appendChild(getPokemonButton);
 
   getPokemonButton.addEventListener('click', () => {
-    getPokemon();
+    fetchAndPopulatePokemons();
   });
-}
-
-function getPokemon() {
-  fetchData('https://pokeapi.co/api/v2/pokemon/')
-    .then((data) => {
-      const pokemonSelect = document.createElement('select');
-      document.body.appendChild(pokemonSelect);
-
-      data.forEach((pokemon) => {
-        console.log(pokemon);
-        // const pokemonOption = document.createElement('option');
-        // pokemonOption.textContent = pokemon;
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 }
 
 window.addEventListener('load', main);
