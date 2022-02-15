@@ -33,3 +33,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// In our exercise we throw five dice. With Promise.race() we will get one resolve or one reject. That is the case. But the other four dices which are not resolved or rejected will go on rolling.
