@@ -18,13 +18,11 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    return err.message;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch');
   }
+  return response.json();
 }
 
 function renderImage(data) {
@@ -33,6 +31,7 @@ function renderImage(data) {
 
   const imageElement = document.createElement('img');
   imageElement.src = data.img;
+  imageElement.alt = data.alt;
   document.body.appendChild(imageElement);
 }
 
@@ -46,12 +45,12 @@ function renderError(error) {
 }
 
 async function main() {
-  const data = await requestData('https://xkcd.now.sh/?comic=latest');
-  if (typeof data === 'string') {
-    renderError(data);
-    return;
+  try {
+    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
   }
-  renderImage(data);
 }
 
 window.addEventListener('load', main);
